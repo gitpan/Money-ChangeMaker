@@ -8,7 +8,7 @@ use vars qw($VERSION);
 use Money::ChangeMaker::Denomination;
 use Money::ChangeMaker::Presets;
 
-$VERSION = "0.1";
+$VERSION = "0.2";
 
 # These are private class members
 
@@ -43,28 +43,10 @@ sub denominations {
   my($option) = shift;
   if(defined($option)) {
 		if (_check_denom($option)) {
-			unless (_is_sorted($option)) {
-				$self->{_DENOMINATIONS} = sort {$b->value <=> $a->value} @{$option};
-			}
-			else {
-				$self->{_DENOMINATIONS} = $option;
-			}
+			$self->{_DENOMINATIONS} = [(sort {$b->value <=> $a->value} @{$option})];
 		}
   }
   return $self->{_DENOMINATIONS};
-}
-
-# Private method, determines if a list of Denominations is properly
-# sorted in decreasing order of value.  This is used to avoid sorting an
-# already-sorted array.
-sub _is_sorted {
-	my($aref) = shift;
-	for (1..$#{$aref}) {
-		if ($aref->[$_]->value > $aref->[$_ - 1]->value) {
-			return 0;
-		}
-	}
-	return 1;
 }
 
 # The whole point of this module.  The entire algorithm is, um...  6 lines.
@@ -331,7 +313,7 @@ information on submitting them to me.
 
 =head1 AUTHOR
 
-Copyright 2002 Avi Finkel <F<avi@finkel.org>>
+Copyright 2006 Avi Finkel <F<avi@finkel.org>>
 
 This package is free software and is provided "as is" without express
 or implied warranty.  It may be used, redistributed and/or modified

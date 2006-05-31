@@ -6,7 +6,7 @@ require 5;
 use strict;
 use vars qw($VERSION);
 
-$VERSION = "0.1";
+$VERSION = "0.2";
 
 ##   Here there be methods
 
@@ -158,7 +158,7 @@ See L<Money::ChangeMaker>
 
 =head1 AUTHOR
 
-Copyright 2002 Avi Finkel <F<avi@finkel.org>>
+Copyright 2006 Avi Finkel <F<avi@finkel.org>>
 
 This package is free software and is provided "as is" without express
 or implied warranty.  It may be used, redistributed and/or modified

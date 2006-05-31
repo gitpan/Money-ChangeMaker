@@ -69,7 +69,7 @@ http://www.lahey.com/float.htm
 
 =head2 Canada
 
-The base unit for this set is the penny.  Thus, twenty dollars is repreented
+The base unit for this set is the penny.  Thus, twenty dollars is represented
 by 2000 and fifty cents by 50.
 
 	Value       Name               Plural
@@ -110,11 +110,12 @@ rare possible error case.
 
 =head2 UK
 
-The base unit for this set is the penny.  Thus, twenty pounds is repreented
+The base unit for this set is the penny.  Thus, twenty pounds is represented
 by 2000 and fifty pence by 50.
 
 	Value       Name               Plural
 	----------------------------------------
+	5000        fifty pound note
 	2000        twenty pound note
 	1000        ten pound note
 	500         five pound note
@@ -130,11 +131,12 @@ by 2000 and fifty pence by 50.
 
 =head2 USA
 
-The base unit for this set is the penny.  Thus, twenty dollars is repreented
+The base unit for this set is the penny.  Thus, twenty dollars is represented
 by 2000 and fifty cents by 50.
 
 	Value       Name               Plural
 	----------------------------------------
+	10000       hundred dollar bill
 	5000        fifty dollar bill
 	2000        twenty dollar bill
 	1000        ten dollar bill
@@ -146,12 +148,57 @@ by 2000 and fifty cents by 50.
 	1           penny              pennies
 
 
+=head2 Australia
+
+The base unit for this set is the cent.  Thus, twenty dollars is represented
+by 2000 and fifty cents by 50.
+
+	Value       Name               Plural
+	----------------------------------------
+	10000       hundred dollar note
+	5000        fifty dollar note
+	2000        twenty dollar note
+	1000        ten dollar note
+	500         five dollar note
+	200         two dollar coin
+	100         one dollar coin
+	50          fifty cent piece
+	20          twenty cent piece
+	10          ten cent piece
+	5           five cent piece
+
+
+=head2 Euro
+
+The base unit for this set is the cent.  Thus, twenty euros is represented
+by 2000 and fifty cents by 50.
+
+	Value       Name               Plural
+	----------------------------------------
+	50000       five hundred euro note
+	20000       two hundred euro note
+	10000       one hundred euro note
+	5000        fifty euro note
+	2000        twenty euro note
+	1000        ten euro note
+	500         five euro note
+	200         two euro coin
+	100         one euro coin
+	50          fifty cent coin
+	20          twenty cent coin
+	10          ten cent coin
+	5           five cent coin
+	2           two cent coin
+	1           one cent coin
+
+
 =head1 Adding Sets
 
-In this release, there is no programmatic method for adding new currency sets,
-apart from directly modifying the private members of this module.  If there
-is sufficient demand, I will add functionality to allow people to add new
-sets at run-time.  Instead, I suggest you use one of these methods instead:
+In this release, there is no programmatic method for adding new currency sets
+to the preset data, apart from directly modifying the documentation of this
+module.  If there is sufficient demand, I will add functionality to allow
+people to add new sets at run-time.  Instead, I suggest you use one of these
+methods instead:
 
 You can modify the contents of the Presets.pm file on your local installation.
 If you do this, simply follow the pattern as already laid out in the file.
@@ -165,18 +212,19 @@ just yourself, you can send it to me at F<avi@finkel.org>.  There is
 no specific format I need it in, I just ask that any submissions are complete,
 accurate and detailed.  If possible, include alternate "slang" names for
 any currency units, include units that are no longer in circulation (but
-please mark them as such,) and any other notes about the units that may
-be of interest.  Any submissions will be greatly appreciated.
+please indicate them as such,) and any other notes about the units that may
+be of interest.  Any submissions will be greatly appreciated and appropriately
+credited.
 
 Please keep in mind that ChangeMaker objects do not B<need> to built using
 presets.  If you are building denomination sets dynamically, they should
-be stored in your own code and gives to the ChangeMaker object using the
+be stored in your own code and given to the ChangeMaker object using the
 'denomination' method.
 
 
 =head1 AUTHOR
 
-Copyright 2002 Avi Finkel <F<avi@finkel.org>>
+Copyright 2006 Avi Finkel <F<avi@finkel.org>>
 
 This package is free software and is provided "as is" without express
 or implied warranty.  It may be used, redistributed and/or modified

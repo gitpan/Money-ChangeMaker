@@ -6,18 +6,11 @@ use strict;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    'NAME'	=> 'Money::ChangeMaker',
-    'VERSION_FROM' => 'ChangeMaker.pm', # finds $VERSION
-    'dist'        => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-		'PM' => {
-			'ChangeMaker.pm' => '$(INST_LIBDIR)/ChangeMaker.pm',
-			'Denomination.pm' => '$(INST_LIBDIR)/ChangeMaker/Denomination.pm',
-			'Presets.pm' => '$(INST_LIBDIR)/ChangeMaker/Presets.pm',
-		},
-		'MAN3PODS' => {
-			'ChangeMaker.pm' => '${INST_MAN3DIR}/Money::ChangeMaker.3',
-			'Denomination.pm' => '${INST_MAN3DIR}/Money::ChangeMaker::Denomination.3',
-			'Presets.pm' => '${INST_MAN3DIR}/Money::ChangeMaker::Presets.3',
+    'NAME'	       => 'Money::ChangeMaker',
+    'VERSION_FROM' => 'lib/Money/ChangeMaker.pm', # finds $VERSION
+    'dist'         => {
+			COMPRESS => 'gzip -9f',
+			SUFFIX => 'gz',
 		},
 );
 
