@@ -8,7 +8,7 @@ use vars qw($VERSION);
 use Money::ChangeMaker::Denomination;
 use Money::ChangeMaker::Presets;
 
-$VERSION = "0.2";
+$VERSION = "0.3";
 
 # These are private class members
 
@@ -313,7 +313,7 @@ information on submitting them to me.
 
 =head1 AUTHOR
 
-Copyright 2006 Avi Finkel <F<avi@finkel.org>>
+Copyright 2007 Avi Finkel <F<avi@finkel.org>>
 
 This package is free software and is provided "as is" without express
 or implied warranty.  It may be used, redistributed and/or modified

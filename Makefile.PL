@@ -1,26 +1,11 @@
-# This script writes the Makefile for Money::ChangeMaker
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
-require 5.004;
-use strict;
-use ExtUtils::MakeMaker;
+use inc::Module::Install;
 
-WriteMakefile(
-    'NAME'	       => 'Money::ChangeMaker',
-    'VERSION_FROM' => 'lib/Money/ChangeMaker.pm', # finds $VERSION
-    'dist'         => {
-			COMPRESS => 'gzip -9f',
-			SUFFIX => 'gz',
-		},
-);
+name 'Money-ChangeMaker';
+all_from 'lib/Money/ChangeMaker.pm';
 
-package MY;
+build_requires('Test::Pod' => 1.26);
+build_requires('Test::Pod::Coverage' => 1.08);
+build_requires('Pod::Coverage' => 0.18);
 
-sub libscan
-{ # Determine things that should *not* be installed
-    my($self, $path) = @_;
-    return '' if $path =~ m/~/;
-    $path;
-}
-
-__END__
+auto_install;
+WriteAll;

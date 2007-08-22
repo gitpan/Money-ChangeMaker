@@ -4,9 +4,6 @@ package Money::ChangeMaker::Denomination;
 
 require 5;
 use strict;
-use vars qw($VERSION);
-
-$VERSION = "0.2";
 
 ##   Here there be methods
 
