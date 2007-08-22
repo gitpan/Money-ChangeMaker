@@ -5,6 +5,8 @@ package Money::ChangeMaker::Denomination;
 require 5;
 use strict;
 
+our $VERSION = '0.3';
+
 ##   Here there be methods
 
 # The constructor method.
